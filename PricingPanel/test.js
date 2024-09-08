@@ -25,3 +25,41 @@ while (input !== 'quit' && input !== 'q') {
 }
 
 console.log('処理を終了するでー');
+
+
+// ここに関数を定義してください
+function retunrDay(intVal) {
+    switch (intVal) {
+        case 1:
+            // code
+            return "Monday"
+            break;
+        case 2:
+            // coden
+            return "TuesDay"
+            break;
+        case 3:
+            // code
+            return "Wednesday"
+            break;
+        case 4:
+            // code
+            return "Thursday"
+            break;
+        case 5:
+            // code
+            return "Friday"
+            break;
+        case 6:
+            // code
+            return "Saturday"
+            break;
+        case 7:
+            // code
+            return "Sunday"
+            break;
+
+        default:
+        // code
+    }
+}
