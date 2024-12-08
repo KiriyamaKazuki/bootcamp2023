@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コメント編集だ。</title>
+</head>
+
+<body>
+    <h1>コメント編集だべ</h1>
+    <form method="POST" action="/comments/<%= comment.id %>?_method=PATCH">
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="コメントを入力"><%=comment.comment  %></textarea>
+        <button>保存する</button>
+    </form>
+    <a href="/comments">もどる</a>
+</body>
+
+</html>

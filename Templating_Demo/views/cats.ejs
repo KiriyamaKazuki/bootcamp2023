@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>猫たち</title>
-</head>
-<body>
-    <h1>ねこたち</h1>
-    <%= cats %>
-    <% for(let cat of cats){ %>
-        <li><%= cat %></li>
-    <% } %>
-</body>
-</html>
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+        <h1>ねこたち</h1>
+        <%= cats %>
+            <% for(let cat of cats){ %>
+                <li>
+                    <%= cat %>
+                </li>
+                <% } %>
+<%- include('partials/footer.ejs') %>

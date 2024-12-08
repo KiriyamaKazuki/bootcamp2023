@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>random</title>
-</head>
-<body>
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
     <h1>ランダム生成: <%= num %></h1>
     <% if(num %2 === 0) { %>
         <h2>偶数だ</h2>
         <% }else { %>
             <h2>奇数だ</h2>
         <% } %>
-</body>
-</html>
+<%- include('partials/footer.ejs') %>

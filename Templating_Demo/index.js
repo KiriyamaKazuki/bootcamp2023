@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const redittdata = require('./data.json');
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 //絶対パスを返す変数
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -18,7 +20,12 @@ app.get('/r/:subreddit', (req,res) => {
     console.log(data);
     // スプレッド構文で記述することでejs側で,data.~を省略可能
     // res.render('subreddit', { name : data.name, subscribers: data.subscribers});
+
+    if (data) {
     res.render('subreddit', { ...data});
+    } else {
+        res.render('notfound', { subreddit });
+    }
 })
 
 app.get('/rand', (req, res) => {
